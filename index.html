@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOSTy</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="icon" type="imace/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+        <div id="main">
+            <header id="header">
+                <nav>
+                    <h1 id="title">
+                        <a href="index.html#">
+                            DOSTy
+                        </a>
+                    </h1>
+
+                    <p>
+                        Mostra le tue top di Spotify all'interno di un falso terminale retrò!
+                    </p>
+
+                    <h3>
+                        DOSTy è in BETA!
+                    </h3>
+
+                    <p id="status">
+                        L'Accesso non è Stato Eseguito!
+                    </p>
+
+                    <button id="login">
+                        Accedi!
+                    </button>
+    
+                    <button id="logout">
+                        Esci!
+                    </button>
+                </nav>
+            </header>
+
+            <hr />
+
+            <div id="logoutContent">
+                <p>
+                    BROOO! Esegui l'Accesso Prima.
+                </p>
+            </div>
+
+            <div id="loginContent">
+                <p>
+                    Top da Mostrare.
+                </p>
+
+                <div class="select" id="type" data-value="tracks">
+                    <div class="option" id="tracks" data-value="tracks" data-checked="true">
+                        Tracce
+                    </div>
+
+                    <div class="option" id="artists" data-value="artists" data-checked="false">
+                        Artisti
+                    </div>
+
+                    <div class="option" id="moods" data-value="moods" data-checked="false">
+                        Mood
+                    </div>
+
+                    <div class="option" id="genres" data-value="genres" data-checked="false">
+                        Generi
+                    </div>
+
+                    <div class="option" id="albums" data-value="albums" data-checked="false">
+                        Album
+                    </div>
+                </div>
+
+                <p>
+                    Periodo di Tempo da Considerare.
+                </p>
+
+                <div class="select" id="timeRange" data-value="short_term">
+                    <div class="option" id="short_term" data-value="short_term" data-checked="true">
+                        Termine Breve
+                        <br />
+                        (1 Mese)
+                    </div>
+
+                    <div class="option" id="medium_term" data-value="medium_term" data-checked="false">
+                        Termine Medio
+                        <br />
+                        (6 Mesi)
+                    </div>
+
+                    <div class="option" id="long_term" data-value="long_term" data-checked="false">
+                        Termine Lungo
+                        <br />
+                        (Sempre)
+                    </div>    
+                </div>
+
+                <p>
+                    Numero di Elementi da Mostrare (Se Disponibili)
+                </p>
+
+                <div class="select" id="limit" data-value="10">
+                    <div class="option" id="10" data-value="10" data-checked="true">
+                        10
+                    </div>
+
+                    <div class="option" id="15" data-value="15" data-checked="false">
+                        15
+                    </div>
+
+                    <div class="option" id="25" data-value="25" data-checked="false">
+                        25
+                    </div>
+
+                    <div class="option" id="40" data-value="40" data-checked="false">
+                        40
+                    </div>
+
+                    <div class="option" id="50" data-value="50" data-checked="false">
+                        50
+                    </div>
+                </div>
+
+                <button type="button" id="get">
+                    Ottieni la tua Top!
+                </button>
+
+                <div id="content">DOSTy!</div>
+
+                <button type="button" id="download">
+                    Scarica la tua Top!
+                </button>
+
+                <button type="button" id="save">
+                    Salva la Top in Spotify!
+                    <br />
+                    (DOSTy Crea la Playlist con le Tracce Mostrate)
+                </button>
+
+                <button type="button" id="open">
+                    Apri la Top in Spotify!
+                    <br />
+                    (DOSTy Apre la Playlist con le Tracce Mostrate)
+                </button>
+            </div>
+
+            <hr />
+
+            <footer id="footer">
+                <ul>
+                    <li>
+                        <a href="contacts.html">
+                            Contatti
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/reallukee/dotfy" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+
+                <p>
+                    Sviluppato da <a href="https://github.com/reallukee" target="_blank">Reallukee</a> con Amore, API e Porconi :)
+                </p>
+            </footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="app.js"></script>
+
+        <noscript>JavaScript is Required!</noscript>
+    </body>
+</html>

@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap');
+
+
+
+:root {
+    --spotify-green: #1DB954;
+    --spotify-white: #FFFFFF;
+    --spotify-black: #191414;
+}
+
+
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    color: #EEE;
+    background: #111;
+
+    font-family: 'Roboto', monospace;
+    font-size: 1rem;
+}
+
+
+
+#main {
+    width: 100%;
+    min-width: 300px;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+a {
+    color: var(--spotify-green);
+}
+
+
+
+#header {
+    width: auto;
+    height: auto;
+    margin: 1.25rem 0;
+    padding: .25rem;
+    
+    background: #111;
+    color: #EEE;
+}
+
+#title {
+    margin: 0 0 .5rem 0;
+    padding: 0;
+}
+
+#status {
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+}
+
+#header p {
+    margin: 0;
+    padding: 0;
+}
+
+#login {
+    width: calc(100%);
+    height: auto;
+    margin: .5rem 0 0 0;
+    padding: 1rem .5rem;
+
+    color: var(--spotify-white);
+    background: var(--spotify-green);
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    font-size: 1.25rem;
+
+    display: block;
+}
+#login:hover {
+    background: transparent;
+    border: 1px solid var(--spotify-green);
+}
+
+#logout {
+    width: calc(100%);
+    height: auto;
+    margin: .5rem 0 0 0;
+    padding: 1rem .5rem;
+
+    color: var(--spotify-white);
+    background: red;
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    font-size: 1.25rem;
+
+    display: block;
+}
+#logout:hover {
+    background: transparent;
+    border: 1px solid red;
+}
+
+select {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin: .25rem;
+    padding: .5rem;
+
+    color: var(--spotify-black);
+    background: var(--spotify-white);
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    display: block;
+}
+
+button {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin: .25rem;
+    padding: .5rem;
+
+    color: var(--spotify-black);
+    background: var(--spotify-white);
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    display: block;
+}
+
+
+
+#loginContent {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: .25rem;
+
+    display: block;
+}
+#loginContent > * {
+    margin: .5rem .25rem !important;
+}
+
+
+
+#logoutContent {
+    width: calc(100% - 1rem);
+    height: 100%;
+    margin: 0;
+    padding: .5rem .25rem;
+
+    display: block;
+}
+#logoutContent > * {
+    margin: .5rem .25rem !important;
+}
+
+
+
+#pageContent {
+    margin: 0;
+    padding: .5rem .25rem;
+
+    display: block;
+}
+
+
+
+#content {
+    width: auto;
+    height: auto;
+    margin: 1rem 0;
+    padding: 2rem;
+
+    color: #EEE;
+    background: #111;
+
+    font-family: monospace;
+    font-size: .8rem;
+}
+#content a {
+    color: #EEE;
+
+    text-decoration: none;
+}
+#content a:hover {
+    text-decoration: underline;
+}
+
+
+
+.row {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    margin: 0 .25rem;
+    padding: 0;
+}
+.col-auto {
+    width: auto;
+    height: auto;
+}
+.col-100 {
+    width: 100%;
+    height: auto;
+}
+.col-75 {
+    width: 75%;
+    height: auto;
+}
+.col-50 {
+    width: 50%;
+    height: auto;
+}
+.col-25 {
+    width: 25%;
+    height: auto;
+}
+
+
+
+#footer {
+    width: 100%;
+    height: auto;
+    margin: 1.25rem 0;
+    padding: .25rem;
+    
+    background: #111;
+    color: #EEE;
+}
+#footer ul {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+}
+#footer li {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+
+hr {
+    margin: 0 .25rem;
+    padding: 0;
+
+    border: 1px solid #DCDCDC;
+}
+
+
+
+#download, #save, #open {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin: unset;
+    padding: 1rem .5rem;
+
+    color: var(--spotify-white);
+    background: var(--spotify-green);
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    font-size: 1.25rem;
+
+    display: block;
+}
+#download:hover, #save:hover, #open:hover {
+    color: var(--spotify-white);
+    background: transparent;
+
+    border: 1px solid var(--spotify-green);
+}
+
+
+
+#get {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin: 1.5rem .25rem 0 .25rem;
+    padding: 1rem .5rem;
+
+    color: var(--spotify-black);
+    background: var(--spotify-white);
+    border-radius: .5rem;
+    border: 1px solid var(--spotify-black);
+
+    font-size: 1.25rem;
+
+    display: block;
+}
+#get:hover {
+    color: var(--spotify-white);
+    background: transparent;
+    
+    border: 1px solid var(--spotify-white);
+}
+
+
+
+.select {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+.select :first-child {
+    border-radius: .5rem 0 0 .5rem;
+    border-left: 1px solid #DCDCDC;
+}
+.select :last-child {
+    border-radius: 0 .5rem .5rem 0;
+    border-right: 1px solid #DCDCDC;
+}
+
+.option {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: .5rem;
+
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: .5px solid #DCDCDC;
+    border-right: .5px solid #DCDCDC;
+
+    text-align: center;
+}
+.option[data-checked="true"] {
+    color: var(--spotify-black);
+    background-color: var(--spotify-white);
+}
+.option[data-checked="false"] {
+    color: var(--spotify-white);
+    background-color: var(--spotify-black);
+}
