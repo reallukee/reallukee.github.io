@@ -713,7 +713,7 @@
 
                 content.innerHTML += generateContent(index, `${albums[i][0].toUpperCase()}.album`, albums[i][1].url, `${parseInt(albums[i][1].count)}KB`);
     
-                special += parseInt(albums[i][1]);
+                special += parseInt(albums[i][1].count);
             }
         }
 
