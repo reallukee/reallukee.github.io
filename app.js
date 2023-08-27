@@ -315,7 +315,7 @@
             <br /> \
             Last Login ${new Date().toLocaleString()}<br /> \
             Logged as ${localStorage.getItem('dostyUserName')}.<br /> \
-            <br />' +
+            <br /> \
             D:\\Music\\${directory}>dir /F:%filters%<br /> \
             <br /> \
             DOSTy Explorer v6.22<br /> \
@@ -350,7 +350,7 @@
             <br /> \
             * Directory Elements: ${size}<br /> \
             * Directory Size: ${parseInt(special)}KB<br /> \
-            <br />' \
+            <br /> \
             D:\\Music\\${directory}> \
             </div> \
             </div>`;
