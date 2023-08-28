@@ -854,7 +854,7 @@
             },
             body: JSON.stringify({
                 name: `yourbestsongs`,
-                description: `DOTSy - ${d}/${m}/${y}`,
+                description: `DOSTy - ${d}/${m}/${y}`,
                 public: true,
             }),
         })
