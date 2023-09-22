@@ -18,23 +18,27 @@
                     </h1>
 
                     <p>
-                        Mostra le tue top di Spotify all'interno di un falso terminale retrò!
+                        Show Your Spotify Tops Inside a Fake Retro Terminal!
                     </p>
-
-                    <h3>
-                        DOSTy è in BETA!
-                    </h3>
 
                     <p id="status">
-                        L'Accesso non è Stato Eseguito!
+                        Not Logged!
                     </p>
 
-                    <button id="login">
-                        Accedi!
+                    <button type="button" id="login">
+                        Log In with Spotify!
                     </button>
+
+                    <div id="keepLoginContainer">
+                        <input id="keepLogin" type="checkbox" />
+
+                        <label for="keepLogin">
+                            Keep Log In
+                        </label>
+                    </div>
     
-                    <button id="logout">
-                        Esci!
+                    <button type="button" id="logout">
+                        Log Out!
                     </button>
                 </nav>
             </header>
@@ -43,22 +47,22 @@
 
             <div id="logoutContent">
                 <p>
-                    BROOO! Esegui l'Accesso Prima.
+                    Not Logged!    
                 </p>
             </div>
 
             <div id="loginContent">
                 <p>
-                    Top da Mostrare.
+                    Category
                 </p>
 
                 <div class="select" id="type" data-value="tracks">
                     <div class="option" id="tracks" data-value="tracks" data-checked="true">
-                        Tracce
+                        Tracks
                     </div>
 
                     <div class="option" id="artists" data-value="artists" data-checked="false">
-                        Artisti
+                        Artists
                     </div>
 
                     <div class="option" id="moods" data-value="moods" data-checked="false">
@@ -66,40 +70,40 @@
                     </div>
 
                     <div class="option" id="genres" data-value="genres" data-checked="false">
-                        Generi
+                        Genres
                     </div>
 
                     <div class="option" id="albums" data-value="albums" data-checked="false">
-                        Album
+                        Albums
                     </div>
                 </div>
 
                 <p>
-                    Periodo di Tempo da Considerare.
+                    Time
                 </p>
 
                 <div class="select" id="timeRange" data-value="short_term">
                     <div class="option" id="short_term" data-value="short_term" data-checked="true">
-                        Termine Breve
+                        Short Term
                         <br />
-                        (1 Mese)
+                        (1 Month)
                     </div>
 
                     <div class="option" id="medium_term" data-value="medium_term" data-checked="false">
-                        Termine Medio
+                        Medium Term
                         <br />
-                        (6 Mesi)
+                        (6 Months)
                     </div>
 
                     <div class="option" id="long_term" data-value="long_term" data-checked="false">
-                        Termine Lungo
+                        Long Term
                         <br />
-                        (Sempre)
+                        (All Time)
                     </div>    
                 </div>
 
                 <p>
-                    Numero di Elementi da Mostrare (Se Disponibili)
+                    Elements
                 </p>
 
                 <div class="select" id="limit" data-value="10">
@@ -125,25 +129,21 @@
                 </div>
 
                 <button type="button" id="get">
-                    Ottieni la tua Top!
+                    Get your Top!
                 </button>
 
                 <div id="content">DOSTy!</div>
 
                 <button type="button" id="download">
-                    Scarica la tua Top!
+                    Download your Top!
                 </button>
 
                 <button type="button" id="save">
-                    Salva la Top in Spotify!
-                    <br />
-                    (DOSTy Crea la Playlist con le Tracce Mostrate)
+                    Save your Top in Spotify!
                 </button>
 
                 <button type="button" id="open">
-                    Apri la Top in Spotify!
-                    <br />
-                    (DOSTy Apre la Playlist con le Tracce Mostrate)
+                    Open your Top in Spotify!
                 </button>
             </div>
 
@@ -153,13 +153,13 @@
                 <ul>
                     <li>
                         <a href="contacts.html">
-                            Contatti
+                            Contacts
                         </a>
                     </li>
 
                     <li>
                         <a href="privacy.html">
-                            Privacy Policy
+                            Policy Privacy
                         </a>
                     </li>
 
@@ -171,7 +171,7 @@
                 </ul>
 
                 <p>
-                    Sviluppato da <a href="https://github.com/reallukee" target="_blank">Reallukee</a> con Amore, API e Porconi :)
+                    Developed by <a href="https://github.com/reallukee" target="_blank">Reallukee</a> using Spotify API!
                 </p>
             </footer>
         </div>

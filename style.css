@@ -186,6 +186,10 @@ button {
     font-family: monospace;
     font-size: .8rem;
 }
+#content ::selection {
+    color: #111;
+    background: #EEE;
+}
 #content a {
     color: #EEE;
 
@@ -351,4 +355,22 @@ hr {
 .option[data-checked="false"] {
     color: var(--spotify-white);
     background-color: var(--spotify-black);
+}
+
+
+
+#spotify {
+    width: 33%;
+    height: auto;
+}
+
+
+
+#keepLoginContainer {
+    margin: .5rem 0 0 0;
+    padding: 0;
+}
+#keepLoginContainer * {
+    margin: 0;
+    padding: 0;
 }

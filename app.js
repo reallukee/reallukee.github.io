@@ -93,8 +93,13 @@
             access_token = data.access_token;
             refresh_token = data.refresh_token;
 
-            // localStorage.setItem('dostyAccessToken', access_token);
-            // localStorage.setItem('dostyRefreshToken', refresh_token);
+            var keepLogin = document.getElementById('keepLogin');
+
+            if (keepLogin.value)
+            {
+                localStorage.setItem('dostyAccessToken', access_token);
+                localStorage.setItem('dostyRefreshToken', refresh_token);
+            }
 
             getUserData();
 
@@ -125,8 +130,13 @@
             access_token = data.access_token;
             refresh_token = data.refresh_token;
 
-            // localStorage.setItem('dostyAccessToken', access_token);
-            // localStorage.setItem('dostyRefreshToken', refresh_token);
+            var keepLogin = document.getElementById('keepLogin');
+
+            if (keepLogin.value)
+            {
+                localStorage.setItem('dostyAccessToken', access_token);
+                localStorage.setItem('dostyRefreshToken', refresh_token);
+            }
 
             getUserData();
         })
@@ -135,7 +145,7 @@
 
 
 
-    const localHost = 'http://127.0.0.1:3000';
+    const localHost = 'http://127.0.0.1:3000/';
 
     const clientId = 'eb517c9244c848b3bc580709a52ce58d';
     const redirectUri = 'https://reallukee.github.io/';
@@ -172,7 +182,8 @@
         document.getElementById('logout').style.display = 'block';
         document.getElementById('loginContent').style.display = 'block';
         document.getElementById('logoutContent').style.display = 'none';
-        document.getElementById('status').innerText = 'Accesso Eseguito come Utente!';
+        document.getElementById('status').innerText = 'Logged as User';
+        document.getElementById('keepLoginContainer').style.display = 'none';
     }
     else
     {
@@ -182,7 +193,8 @@
             document.getElementById('logout').style.display = 'block';
             document.getElementById('loginContent').style.display = 'block';
             document.getElementById('logoutContent').style.display = 'none';
-            document.getElementById('status').innerText = 'Accesso Eseguito come Utente!';
+            document.getElementById('status').innerText = 'Not Logged!';
+            document.getElementById('keepLoginContainer').style.display = 'none';
 
             getUserData();
         }
@@ -192,7 +204,8 @@
             document.getElementById('logout').style.display = 'none';
             document.getElementById('loginContent').style.display = 'none'; 
             document.getElementById('logoutContent').style.display = 'block';
-            document.getElementById('status').innerText = "L'Accesso non è Stato Eseguito!";
+            document.getElementById('status').innerText = 'Not Logged!';
+            document.getElementById('keepLoginContainer').style.display = 'block';
         }
     }
 
@@ -284,7 +297,7 @@
             localStorage.setItem('dostyUserName', data.display_name);
             localStorage.setItem('dostyUserId', data.id);
 
-            document.getElementById('status').innerHTML = `Accesso Eseguito come <a href="${data.uri}" target="_blank">${localStorage.getItem('dostyUserName')}</a>!`;
+            document.getElementById('status').innerHTML = `Logged as <a href="${data.uri}" target="_blank">${localStorage.getItem('dostyUserName')}</a>!`;
         })
         .catch((error) => { catchError(error); });
     }
@@ -301,7 +314,12 @@
             Last Login ${new Date().toLocaleString()}<br /> \
             Logged as ${localStorage.getItem('dostyUserName')}.<br /> \
             <br /> \
-            D:\\Music> \
+            D:\\Spotify>ver<br /> \
+            <br />
+            DOSTy v2.0.0<br /> \
+            by Reallukee<br /> \
+            <br /> \
+            D:\\Spotify> \
             </div> \
             </div>`;
     }
@@ -316,7 +334,7 @@
             Last Login ${new Date().toLocaleString()}<br /> \
             Logged as ${localStorage.getItem('dostyUserName')}.<br /> \
             <br /> \
-            D:\\Music\\${directory}>dir /F:%filters%<br /> \
+            D:\\Spotify\\${directory}>dir /F:%filters%<br /> \
             <br /> \
             DOSTy Explorer v6.22<br /> \
             <br /> \
@@ -325,7 +343,7 @@
             * Total Disk Size: 1048676KB<br /> \
             * Available Disk Size: 131072KB<br /> \
             <br /> \
-            Current Directory: D:\\Music\\${directory}<br /> \
+            Current Directory: D:\\Spotify\\${directory}<br /> \
             Current Filters: ${type}, ${timeRange}, ${limit}<br /> \
             <br /> \
             </div> \
@@ -350,6 +368,10 @@
             <br /> \
             * Directory Elements: ${size}<br /> \
             * Directory Size: ${parseInt(special)}KB<br /> \
+            <br /> \
+            <img id="spotify" src="./spotify-icons-logos/logos/01_RGB/02_PNG/Spotify_Logo_RGB_White.png" /> \
+            <div class="row"> \
+            <div class="col col-100"> \
             <br /> \
             D:\\Music\\${directory}> \
             </div> \
