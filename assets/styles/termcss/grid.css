@@ -1,0 +1,87 @@
+#termcss {
+    width: 100%;
+    max-width: 800px;
+    min-width: auto;
+    height: auto;
+    max-height: auto;
+    min-height: auto;
+
+    color: var(--text);
+    background: var(--body);
+}
+
+
+
+.container-v {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-h {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.container-v.align-right,
+.container-h.align-right {
+    align-items: start;
+}
+
+.container-v.align-center,
+.container-h.align-center {
+    align-items: center;
+}
+
+.container-v.align-left,
+.container-h.align-left {
+    align-items: end;
+}
+
+.container-v.g-0,
+.container-h.g-0 {
+    gap: 0rem;
+}
+.container-v.g-1,
+.container-h.g-1 {
+    gap: 1rem;
+}
+.container-v.g-2,
+.container-h.g-2 {
+    gap: 2rem;
+}
+.container-v.g-3,
+.container-h.g-3 {
+    gap: 3rem;
+}
+.container-v.g-4,
+.container-h.g-4 {
+    gap: 4rem;
+}
+.container-v.g-5,
+.container-h.g-5 {
+    gap: 5rem;
+}
+
+
+
+.my-0 { margin: 0rem 0rem; }
+.my-1 { margin: 1rem 0rem; }
+.my-2 { margin: 2rem 0rem; }
+.my-3 { margin: 3rem 0rem; }
+.my-4 { margin: 4rem 0rem; }
+.my-5 { margin: 5rem 0rem; }
+
+.py-0 { padding: 0rem 0rem; }
+.py-1 { padding: 1rem 0rem; }
+.py-2 { padding: 2rem 0rem; }
+.py-3 { padding: 3rem 0rem; }
+.py-4 { padding: 4rem 0rem; }
+.py-5 { padding: 5rem 0rem; }

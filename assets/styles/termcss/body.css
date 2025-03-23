@@ -1,0 +1,273 @@
+@import url("config.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+*::selection {
+    color: var(--body);
+    background: var(--text);
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--body);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--bodySecondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--textSecondary);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text);
+    background: var(--body);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+a {
+    color: unset;
+
+    text-decoration: unset;
+}
+
+
+
+.text-body { color: var(--body); }
+.text-text { color: var(--text); }
+.text-body-secondary { color: var(--bodySecondary); }
+.text-text-secondary { color: var(--textSecondary); }
+
+.body-body { background: var(--body); }
+.body-text { background: var(--text); }
+.body-body-secondary { background: var(--bodySecondary); }
+.body-text-secondary { background: var(--textSecondary); }
+
+
+
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.button::before {
+    content: "-->";
+
+    opacity: 0.75;
+}
+
+.button > .button-content {
+    opacity: 0.75;
+}
+.button > .button-content:hover {
+    text-decoration: wavy underline;
+}
+
+
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.list-item::before {
+    content: "*";
+
+    opacity: 0.75;
+}
+
+.list-item > .list-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.list-item > .list-item-content:hover {
+    opacity: 1.0;
+}
+
+
+
+.title {
+    color: var(--text);
+    background: var(--body);
+
+    font-weight: bolder;
+}
+.title:hover {
+    opacity: 0.75;
+
+    text-decoration: wavy underline;
+}
+
+
+
+.subtitle {
+    color: var(--text);
+    background: var(--body);
+
+    font-weight: lighter;
+
+}
+.subtitle:hover {
+    opacity: 0.75;
+
+    text-decoration: wavy underline;
+}
+
+
+
+.text {
+    color: var(--text);
+    background: var(--body);
+}
+
+.text a,
+.text .link {
+    color: var(--textSecondary);
+
+    text-decoration: wavy underline;
+}
+.text a.active,
+.text .link.active {
+    opacity: 0.75;
+}
+.text a:hover,
+.text .link:hover {
+    opacity: 0.75;
+
+    text-decoration: wavy underline;
+}
+
+
+
+.text-highlight {
+    color: var(--body);
+    background: var(--text);
+}
+
+.text-highlight a,
+.text-highlight .link {
+    color: var(--bodySecondary);
+    background: var(--textSecondary);
+}
+.text-highlight a.active,
+.text-highlight .link.active {
+    opacity: 0.75;
+}
+.text-highlight a:hover,
+.text-highlight .link:hover {
+    color: var(--textSecondary);
+    background: var(--bodySecondary);
+
+    opacity: 0.75;
+}
+
+
+
+.text .italic,
+.text-highlight .italic { font-style: italic; }
+
+.text .bold,
+.text-highlight .bold { font-weight: bolder; }
+
+.text .light,
+.text-highlight .light { font-weight: lighter; }
+
+.title.align-left,
+.subtitle.align-left,
+.text.align-left,
+.text-highlight.align-left { text-align: left; }
+
+.title.align-center,
+.subtitle.align-center,
+.text.align-center,
+.text-highlight.align-center { text-align: center; }
+
+.title.align-right,
+.subtitle.align-right,
+.text.align-right,
+.text-highlight.align-right { text-align: right; }
+
+
+
+.section-title > .section-content,
+.section-title > a > .section-content {
+    display: block;
+
+    color: var(--text);
+    background: var(--body);
+
+    font-weight: bolder;
+
+    white-space: pre;
+}
+
+.section-subtitle > .section-content,
+.section-subtitle > a > .section-content {
+    display: block;
+
+    color: var(--text);
+    background: var(--body);
+
+    font-weight: lighter;
+
+    white-space: pre;
+}
+
+.section-text > .section-content,
+.section-text > a > .section-content {
+    display: block;
+
+    color: var(--text);
+    background: var(--body);
+
+    font-weight: normal;
+
+    white-space: pre;
+}
+
+.section-title > .section-content:hover,
+.section-title > a > .section-content:hover,
+.section-subtitle > .section-content:hover,
+.section-subtitle > a > .section-content:hover,
+.section-text > .section-content:hover,
+.section-text > a > .section-content:hover {
+    opacity: 0.75;
+}
+
+.section-content.align-left { text-align: left; }
+.section-content.align-center { text-align: center; }
+.section-content.align-right { text-align: right; }

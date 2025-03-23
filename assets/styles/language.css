@@ -1,0 +1,68 @@
+:root {
+    --c: #555555;
+    --cpp: #F0648C;
+    --csharp: #198700;
+    --vbnet: #965FB9;
+    --fhsarp: #B946FA;
+    --html: #E14B28;
+    --css: #64329B;
+    --javascript: #F0E15A;
+    --typescript: #3278C8;
+    --php: #505F96;
+    --python: #3778A5;
+    --powershell: #00235A;
+    --batchfile: #C3F02D;
+    --shell: #87E150;
+    --vbscript: #14DCDC;
+}
+
+
+
+.language::before {
+    content: " ";
+
+    width: .5rem;
+    height: .5rem;
+    margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+
+.language.c * { color: var(--c); }
+.language.cpp * { color: var(--cpp); }
+.language.csharp * { color: var(--csharp); }
+.language.vbnet * { color: var(--vbnet); }
+.language.fsharp * { color: var(--fhsarp); }
+.language.html * { color: var(--html); }
+.language.css * { color: var(--css); }
+.language.javascript * { color: var(--javascript); }
+.language.typescript * { color: var(--typescript); }
+.language.php * { color: var(--php); }
+.language.python * { color: var(--python); }
+.language.powershell * { color: var(--powershell); }
+.language.batchfile * { color: var(--batchfile); }
+.language.shell * { color: var(--shell); }
+.language.vbscript * { color: var(--vbscript); }
+
+
+
+.c.language::before { background: var(--c); }
+.cpp.language::before{ background: var(--cpp); }
+.csharp.language::before { background: var(--csharp); }
+.vbnet.language::before { background: var(--vbnet); }
+.fsharp.language::before { background: var(--fhsarp); }
+.html.language::before { background: var(--html); }
+.css.language::before { background: var(--css); }
+.javascript.language::before { background: var(--javascript); }
+.typescript.language::before { background: var(--typescript); }
+.php.language::before { background: var(--php); }
+.python.language::before { background: var(--python); }
+.powershell.language::before { background: var(--powershell); }
+.batchfile.language::before { background: var(--batchfile); }
+.shell.language::before { background: var(--shell); }
+.vbscript.language::before { background: var(--vbscript); }

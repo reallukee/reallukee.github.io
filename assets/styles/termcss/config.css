@@ -1,0 +1,15 @@
+:root {
+    --text: #EEE;
+    --body: #111;
+    --textSecondary: #CCC;
+    --bodySecondary: #222;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #111;
+        --body: #EEE;
+        --textSecondary: #222;
+        --bodySecondary: #CCC;
+    }
+}
