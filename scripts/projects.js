@@ -9,7 +9,7 @@
 
         projectTemplateSource = projectTemplate.innerHTML;
 
-        const projects = await fetch("./assets/contents/projects.json")
+        const projects = await fetch("./contents/projects.json")
             .then((response) => {
                 if (response.ok) {
                     return response.json();

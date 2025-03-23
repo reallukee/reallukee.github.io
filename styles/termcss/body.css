@@ -198,28 +198,47 @@ a {
 
 
 .text .italic,
-.text-highlight .italic { font-style: italic; }
+.text-highlight .italic {
+    font-style: italic;
+}
+
+.text .oblique,
+.text-highlight .oblique {
+    font-style: oblique;
+}
 
 .text .bold,
-.text-highlight .bold { font-weight: bolder; }
+.text-highlight .bold {
+    font-weight: bolder;
+}
 
 .text .light,
-.text-highlight .light { font-weight: lighter; }
+.text-highlight .light {
+    font-weight: lighter;
+}
+
+
 
 .title.align-left,
 .subtitle.align-left,
 .text.align-left,
-.text-highlight.align-left { text-align: left; }
+.text-highlight.align-left {
+    text-align: left;
+}
 
 .title.align-center,
 .subtitle.align-center,
 .text.align-center,
-.text-highlight.align-center { text-align: center; }
+.text-highlight.align-center {
+    text-align: center;
+}
 
 .title.align-right,
 .subtitle.align-right,
 .text.align-right,
-.text-highlight.align-right { text-align: right; }
+.text-highlight.align-right {
+    text-align: right;
+}
 
 
 
@@ -235,6 +254,8 @@ a {
     white-space: pre;
 }
 
+
+
 .section-subtitle > .section-content,
 .section-subtitle > a > .section-content {
     display: block;
@@ -246,6 +267,8 @@ a {
 
     white-space: pre;
 }
+
+
 
 .section-text > .section-content,
 .section-text > a > .section-content {
@@ -259,6 +282,8 @@ a {
     white-space: pre;
 }
 
+
+
 .section-title > .section-content:hover,
 .section-title > a > .section-content:hover,
 .section-subtitle > .section-content:hover,
@@ -267,6 +292,8 @@ a {
 .section-text > a > .section-content:hover {
     opacity: 0.75;
 }
+
+
 
 .section-content.align-left { text-align: left; }
 .section-content.align-center { text-align: center; }
