@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>reallukee ~ home</title>
+  <title>reallukee ~ project</title>
 
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
@@ -47,7 +47,7 @@
         </p>
 
         <p class="text">
-          <a href="./projects.html" class="link">
+          <a href="./projects.html" class="link active">
             projects
           </a>
         </p>
@@ -64,48 +64,110 @@
     <!-- Header End -->
 
     <!-- Main Begin -->
-    <section class="container-v g-3">
-      <header class="section-subtitle">
-        <a href="#home" id="home">
-          <div class="section-content">
-            home
-          </div>
-        </a>
-      </header>
-
-      <div class="container-v g-1" id="aboutContent">
-        <p class="text">
-          Welcome!
-        </p>
-      </div>
-
-      <div class="container-v g-1">
-        <div class="button">
-          <div class="button-content">
-            <a href="./about.html">
-              about
-            </a>
-          </div>
-        </div>
-
-        <div class="button">
-          <div class="button-content">
-            <a href="./projects.html">
-              projects
-            </a>
-          </div>
-        </div>
-
-        <div class="button">
-          <div class="button-content">
-            <a href="./contacts.html">
-              contacts
-            </a>
-          </div>
-        </div>
-      </div>
+    <section class="container-v g-1" id="projectContent">
+      <p class="text-highlight">
+        <span>
+          Loading...
+        </span>
+      </p>
     </section>
     <!-- Main End -->
+
+    <!-- Main Template Begin -->
+    <script type="text/template" id="projectTemplate">
+      <% if (locals.project) { %>
+        <header class="section-subtitle">
+          <a href="#<%= project.id; %>" id="<%= project.id; %>">
+            <div class="section-content">
+              <%= project.name; %>
+            </div>
+          </a>
+        </header>
+
+        <div class="container-h g-1">
+          <p class="text">
+            <span class="license <%= project.license; %>">
+              <a href="./projects.html?license=<%= project.license; %>" class="no-underline">
+                <span class="fw-light">
+                  <%= project.license; %>
+                </span>
+              </a>
+            </span>
+          </p>
+        </div>
+
+        <div class="container-h g-1">
+          <% project.languages.forEach((language) => { %>
+            <p class="text">
+              <span class="language <%= language.id; %>">
+                <a href="./projects.html?language=<%= language.id; %>" class="no-underline">
+                  <span class="fw-normal">
+                    <%= language.name; %>
+                  </span>
+                </a>
+              </span>
+            </p>
+          <% }); %>
+        </div>
+
+        <div class="container-h g-1">
+          <% project.tags.forEach((tag) => { %>
+            <p class="text-highlight">
+              <span class="tag <%= tag.id; %>">
+                <a href="./projects.html?tag=<%= tag.id; %>">
+                  <span class="fs-italic">
+                    <%= tag.name; %>
+                  </span>
+                </a>
+              </span>
+            </p>
+          <% }); %>
+        </div>
+
+        <div class="container-v g-1">
+          <p class="text">
+            <% project.description.forEach((line) => { %>
+              <span><%= line; %></span>
+            <% }); %>
+          </p>
+        </div>
+
+        <div class="container-v g-1">
+          <div class="button">
+            <div class="button-content">
+              <a href="./project.html?project=<%= project.id; %>">
+                Project
+              </a>
+            </div>
+          </div>
+
+          <div class="button">
+            <div class="button-content">
+              <a href="<%= project.repository; %>" target="_blank">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <% project.buttons.forEach((button) => { %>
+            <div class="button">
+              <div class="button-content">
+                <a href="<%= button.url; %>" target="_blank">
+                  <%= button.name; %>
+                </a>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      <% } else { %>
+        <p class="text-highlight">
+          <span>
+            Not Found
+          </span>
+        </p>
+      <% } %>
+    </script>
+    <!-- Main Template End -->
 
     <div class="my-0"></div>
 
@@ -185,5 +247,7 @@
   <!-- Page End -->
 
   <noscript>JavaScript is required :(!</noscript>
+
+  <script src="./scripts/project.js"></script>
 </body>
 </html>

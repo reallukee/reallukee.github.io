@@ -1,0 +1,38 @@
+@import url("config.css");
+
+:root {
+    --textAuto: var(--textLight);
+    --bodyAuto: var(--bodyLight);
+    --textSecondaryAuto: var(--textSecondaryLight);
+    --bodySecondaryAuto: var(--bodySecondaryLight);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --textAuto: var(--textDark);
+        --bodyAuto: var(--bodyDark);
+        --textSecondaryAuto: var(--textSecondaryDark);
+        --bodySecondaryAuto: var(--bodySecondaryDark);
+    }
+}
+
+.theme-auto {
+    --text: var(--textAuto);
+    --body: var(--bodyAuto);
+    --textSecondary: var(--textSecondaryAuto);
+    --bodySecondary: var(--bodySecondaryAuto);
+}
+
+.theme-light {
+    --text: var(--textLight);
+    --body: var(--bodyLight);
+    --textSecondary: var(--textSecondaryLight);
+    --bodySecondary: var(--bodySecondaryLight);
+}
+
+.theme-dark {
+    --text: var(--textDark);
+    --body: var(--bodyDark);
+    --textSecondary: var(--textSecondaryDark);
+    --bodySecondary: var(--bodySecondaryDark);
+}

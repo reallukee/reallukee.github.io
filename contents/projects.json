@@ -1,116 +1,177 @@
-[
-  {
-    "id": "arp",
-    "title": "ARP",
-    "language": "C",
-    "languageId": "c",
-    "tags": [
-      "Arduino",
-      "Library"
-    ],
-    "description": [
-      "🤖 A Library to Build a Rest Api on your Arduino"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/arp"
-      }
-    ]
-  },
-  {
-    "id": "cfallsave",
-    "title": "CFallSave",
-    "language": "C++",
-    "languageId": "cpp",
-    "tags": [
-      "Fallout",
-      "Library"
-    ],
-    "description": [
-      "☢️ A C/C++ Library to Read Fallout Save Files"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/cfallsave"
-      }
-    ]
-  },
-  {
-    "id": "vsdevcmd-to-path",
-    "title": "VsDevCmd to Path",
-    "language": "PowerShell",
-    "languageId": "powershell",
-    "tags": [
-      "Visual Studio",
-      "Script"
-    ],
-    "description": [
-      "⚡ Aggiungi (o rimuovi) VsDevCmd dalla variabile Path"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/vsdevcmd-to-path"
-      }
-    ]
-  },
-  {
-    "id": "musistat",
-    "title": "MusiStat",
-    "language": "HTML",
-    "languageId": "html",
-    "tags": [
-      "Spotify",
-      "Web App"
-    ],
-    "description": [
-      "🎶 Your Spotify tops and data in one place!"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/musistat"
-      }
-    ]
-  },
-  {
-    "id": "ohmycon",
-    "title": "OhMyCon",
-    "language": "VBScript",
-    "languageId": "vbscript",
-    "tags": [
-      "Windows",
-      "Script"
-    ],
-    "description": [
-      "🎨 Uno strumento per dare colore alle cartelle di Windows"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/ohmycon"
-      }
-    ]
-  },
-  {
-    "id": "paperatheme-devpp",
-    "title": "Papera Theme DEV++",
-    "language": "Batchfile",
-    "languageId": "batchfile",
-    "tags": [
-      "DEV++",
-      "Theme"
-    ],
-    "description": [
-      "Papera Theme for Bloodshed DEV++ 5.11"
-    ],
-    "buttons": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/reallukee/paperatheme-devpp"
-      }
-    ]
-  }
-]
+{
+  "$schema": "./projects.scheme.json",
+  "content": [
+    {
+      "id": "arp",
+      "name": "ARP",
+      "repository": "https://github.com/reallukee/arp",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "cpp",
+          "name": "C++"
+        }
+      ],
+      "tags": [
+        {
+          "id": "arduino",
+          "name": "Arduino"
+        },
+        {
+          "id": "library",
+          "name": "Library"
+        }
+      ],
+      "description": [
+        "🤖 A Library to Build a Rest Api on your Arduino"
+      ],
+      "buttons": []
+    },
+    {
+      "id": "cfallsave",
+      "name": "CFallSave",
+      "repository": "https://github.com/reallukee/cfallsave",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "c",
+          "name": "C"
+        },
+        {
+          "id": "cpp",
+          "name": "C++"
+        },
+        {
+          "id": "makefile",
+          "name": "Makefile"
+        }
+      ],
+      "tags": [
+        {
+          "id": "fallout",
+          "name": "Fallout"
+        },
+        {
+          "id": "library",
+          "name": "Library"
+        }
+      ],
+      "description": [
+        "☢️ A C/C++ Library to Read Fallout Save Files"
+      ],
+      "buttons": []
+    },
+    {
+      "id": "vsdevcmd-to-path",
+      "name": "VsDevCmd to Path",
+      "repository": "https://github.com/reallukee/vsdevcmd-to-path",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "powershell",
+          "name": "PowerShell"
+        }
+      ],
+      "tags": [
+        {
+          "id": "visual-stduio",
+          "name": "Visual Studio"
+        },
+        {
+          "id": "script",
+          "name": "Script"
+        }
+      ],
+      "description": [
+        "⚡ Aggiungi (o rimuovi) VsDevCmd dalla variabile Path"
+      ],
+      "buttons": []
+    },
+    {
+      "id": "musistat",
+      "name": "MusiStat",
+      "repository": "https://github.com/reallukee/musistat",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "html",
+          "name": "HTML"
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "id": "css",
+          "name": "CSS"
+        }
+      ],
+      "tags": [
+        {
+          "id": "spotify",
+          "name": "Spotify"
+        },
+        {
+          "id": "web-app",
+          "name": "Web App"
+        }
+      ],
+      "description": [
+        "🎶 Your Spotify tops and data in one place!"
+      ],
+      "buttons": []
+    },
+    {
+      "id": "ohmycon",
+      "name": "OhMyCon",
+      "repository": "https://github.com/reallukee/ohmycon",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "vbscript",
+          "name": "VBScript"
+        }
+      ],
+      "tags": [
+        {
+          "id": "windows",
+          "name": "Windows"
+        },
+        {
+          "id": "script",
+          "name": "Script"
+        }
+      ],
+      "description": [
+        "🎨 Uno strumento per dare colore alle cartelle di Windows"
+      ],
+      "buttons": []
+    },
+    {
+      "id": "paperatheme-devpp",
+      "name": "Papera Theme DEV++",
+      "repository": "https://github.com/reallukee/paperatheme-devpp",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "batchfile",
+          "name": "Batchfile"
+        }
+      ],
+      "tags": [
+        {
+          "id": "devpp",
+          "name": "DEV++"
+        },
+        {
+          "id": "theme",
+          "name": "Theme"
+        }
+      ],
+      "description": [
+        "Papera Theme for Bloodshed DEV++ 5.11"
+      ],
+      "buttons": []
+    }
+  ]
+}

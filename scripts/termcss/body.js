@@ -1,28 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function renderBody() {
     const titles = document.querySelectorAll(".section-title .section-content");
 
     titles.forEach((title) => {
-        const textContent = title.textContent.trim();
-        const line = "-".repeat(textContent.length);
+        if (!title.classList.contains("rendered")) {
+            const textContent = title.textContent.trim();
 
-        title.textContent = `${line}\n${textContent}\n${line}`;
+            const line = "-".repeat(textContent.length + 4);
+
+            title.textContent = `${line}\n+ ${textContent} +\n${line}`;
+
+            title.classList.add("rendered");
+        }
     });
 
     const subtitles = document.querySelectorAll(".section-subtitle .section-content");
 
     subtitles.forEach((subtitle) => {
-        const textContent = subtitle.textContent.trim();
-        const line = "-".repeat(textContent.length);
+        if (!subtitle.classList.contains("rendered")) {
+            const textContent = subtitle.textContent.trim();
 
-        subtitle.textContent = `${line}\n${textContent}\n${line}`;
+            const line = "-".repeat(textContent.length + 4);
+
+            subtitle.textContent = `${line}\n+ ${textContent} +\n${line}`;
+
+            subtitle.classList.add("rendered");
+        }
     });
 
     const texts = document.querySelectorAll(".section-text .section-content");
 
     texts.forEach((text) => {
-        const textContent = text.textContent.trim();
-        const line = "-".repeat(textContent.length);
+        if (!text.classList.contains("rendered")) {
+            const textContent = text.textContent.trim();
 
-        text.textContent = `${line}\n${textContent}\n${line}`;
+            const line = "-".repeat(textContent.length + 4);
+
+            text.textContent = `${line}\n+ ${textContent} +\n${line}`;
+
+            text.classList.add("rendered");
+        }
     });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderBody();
 });
+
+window.RenderBody = renderBody;

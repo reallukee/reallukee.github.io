@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,38 +8,37 @@
 
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
+  <!-- TermCSS -->
   <link rel="stylesheet" type="text/css" href="./styles/termcss.css" />
   <script type="module" src="./scripts/termcss.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./styles/language.css" />
+  <!-- Languages -->
+  <link rel="stylesheet" type="text/css" href="./styles/languages.css" />
 
+  <!-- Theme -->
+  <script src="./scripts/theme.js"></script>
+
+  <!-- EJS -->
   <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.10/ejs.min.js"></script>
 </head>
 <body>
-  <main id="termcss" class="container-v my-3 py-3 g-5">
+  <!-- Page Begin -->
+  <main id="termcss" class="container-v g-5 my-3 py-3 mo-m-1 mo-p-1">
 
-    <!--
-      Header Begin
-    -->
+    <!-- Header Begin -->
     <header class="container-v g-3">
 
-      <!--
-        Title Begin
-      -->
+      <!-- Title Begin -->
       <div class="section-title">
         <a href="./">
           <div class="section-content">
-            + reallukee.github.io +
+            reallukee.github.io
           </div>
         </a>
       </div>
-      <!--
-        Title End
-      -->
+      <!-- Title End -->
 
-      <!--
-        Navnar Begin
-      -->
+      <!-- Navnar Begin -->
       <nav class="container-h g-1">
         <p class="text">
           <a href="./about.html" class="link">
@@ -59,116 +58,227 @@
           </a>
         </p>
       </nav>
-      <!--
-        Navbar End
-      -->
+      <!-- Navbar End -->
 
     </header>
-    <!--
-      Header End
-    -->
+    <!-- Header End -->
 
-    <!--
-      Main Begin
-    -->
-    <main class="container-v g-3">
+    <!-- Main Begin -->
+    <section class="container-v g-3">
       <header class="section-subtitle">
         <a href="#projects" id="projects">
           <div class="section-content">
-            + projects +
+            projects
           </div>
         </a>
       </header>
 
-      <div class="container-v g-3" id="projectContent"></div>
+      <div class="container-v g-1">
+        <div class="button">
+          <div class="button-content">
+            <a href="./projects.html">
+              reset search
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <script type="text/template" id="projectTemplate">
-        <% locals.projects.forEach((project) => { %>
-          <div class="list-item">
-            <div class="list-item-content">
+      <div class="container-v g-3" id="projectsContent">
+        <p class="text-highlight">
+          <span>
+            Loading...
+          </span>
+        </p>
+      </div>
+    </section>
+    <!-- Main End -->
 
-              <div class="container-h">
-                <p class="text">
+    <!-- Main Template Begin -->
+    <script type="text/template" id="projectsTemplate">
+      <% if (locals.projects) { %>
+        <% if (locals.projects.length == 0) { %>
+          <p class="text-highlight">
+            <span>
+              Not Found
+            </span>
+          </p>
+        <% } %>
+      <% } %>
+
+      <% locals.projects.forEach((project) => { %>
+        <div class="list-item">
+          <div class="list-item-content">
+
+            <div class="container-h g-1">
+              <p class="text">
+                <span class="project <%= project.id; %>">
                   <a href="#<%= project.id; %>" id="<%= project.id; %>">
-                    <span class="title"><%= project.title; %></span>
+                    <span class="title">
+                      <%= project.name; %>
+                    </span>
                   </a>
-                </p>
-              </div>
+                </span>
+              </p>
 
-              <div class="container-h">
+              <p class="text">
+                <span class="license <%= project.license; %>">
+                  <a href="?license=<%= project.license; %>" class="no-underline">
+                    <span class="fw-light">
+                      <%= project.license; %>
+                    </span>
+                  </a>
+                </span>
+              </p>
+            </div>
+
+            <div class="container-h g-1">
+              <% project.languages.forEach((language) => { %>
                 <p class="text">
-                  <span class="language <%= project.languageId; %>">
-                    <a href="?language=<%= project.language; %>">
-                      <span class="subtitle"><%= project.language; %></span>
+                  <span class="language <%= language.id; %>">
+                    <a href="?language=<%= language.id; %>" class="no-underline">
+                      <span class="fw-normal">
+                        <%= language.name; %>
+                      </span>
                     </a>
                   </span>
                 </p>
-              </div>
-
-              <div class="container-h">
-                <% project.tags.forEach((tag) => { %>
-                  <p class="text-highlight">
-                    <a href="?tag=<%= tag; %>">
-                      <span class="italic"><%= tag; %></span>
-                    </a>
-                  </p>
-                <% }); %>
-              </div>
-
-              <div class="container-v">
-                <p class="text">
-                  <% project.description.forEach((line) => { %>
-                    <span><%= line; %></span>
-                  <% }); %>
-                </p>
-              </div>
-
-              <div class="container-v">
-                <% project.buttons.forEach((button) => { %>
-                  <div class="button">
-                    <div class="button-content">
-                      <a href="<%= button.url; %>" target="_blank">
-                        <%= button.name; %>
-                      </a>
-                    </div>
-                  </div>
-                <% }); %>
-              </div>
-
+              <% }); %>
             </div>
+
+            <div class="container-h g-1">
+              <% project.tags.forEach((tag) => { %>
+                <p class="text-highlight">
+                  <span class="tag <%= tag.id; %>">
+                    <a href="?tag=<%= tag.id; %>">
+                      <span class="fs-italic">
+                        <%= tag.name; %>
+                      </span>
+                    </a>
+                  </span>
+                </p>
+              <% }); %>
+            </div>
+
+            <div class="container-v g-1">
+              <p class="text">
+                <% project.description.forEach((line) => { %>
+                  <span class="line"><%= line; %></span>
+                <% }); %>
+              </p>
+            </div>
+
+            <div class="container-v g-1">
+              <div class="button">
+                <div class="button-content">
+                  <a href="./project.html?project=<%= project.id; %>">
+                    Project
+                  </a>
+                </div>
+              </div>
+
+              <div class="button">
+                <div class="button-content">
+                  <a href="<%= project.repository; %>" target="_blank">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              <% project.buttons.forEach((button) => { %>
+                <div class="button">
+                  <div class="button-content">
+                    <a href="<%= button.url; %>" target="_blank">
+                      <%= button.name; %>
+                    </a>
+                  </div>
+                </div>
+              <% }); %>
+            </div>
+
           </div>
-        <% }); %>
-      </script>
-    </main>
-    <!--
-      Main End
-    -->
+        </div>
+      <% }); %>
+    </script>
+    <!-- Main Template End -->
 
     <div class="my-0"></div>
 
-    <!--
-      Footer Begin
-    -->
-    <footer class="container-v g-1">
-      <p class="text">
-        made with my hands
-      </p>
-
-      <nav class="container-h g-1">
+    <!-- Footer Begin -->
+    <footer class="container-v g-3">
+      <div class="container-v g-1">
         <p class="text">
-          <a href="https://github.com/reallukee" target="_blank">
-           GitHub
+          made with my hands &lt;3
+        </p>
+
+        <div class="button">
+          Me!!!
+
+          <div class="button-content">
+            <a href="https://github.com/reallukee" target="_blank">
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="button">
+          Repository!!!
+
+          <div class="button-content">
+            <a href="https://github.com/reallukee/reallukee.github.io" target="_blank">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-v g-1">
+        <!-- <p class="text">
+          Current Theme:
+
+          <a href="#theme" id="switchTheme">
+            auto
+          </a>
+        </p> -->
+
+        <nav class="container-h g-1">
+          <p class="text">
+            theme:
+          </p>
+
+          <p class="text">
+            <a href="#theme" class="active" id="autoTheme">
+              auto
+            </a>
+          </p>
+
+          <p class="text">
+            <a href="#theme" id="lightTheme">
+              light
+            </a>
+          </p>
+
+          <p class="text">
+            <a href="#theme" id="darkTheme">
+              dark
+            </a>
+          </p>
+        </nav>
+      </div>
+
+      <div class="container-v g-1">
+        <p class="text">
+          <a href="#">
+            top ^
           </a>
         </p>
-      </nav>
+      </div>
     </footer>
-    <!--
-      Footer End
-    -->
+    <!-- Footer End -->
 
   </main>
+  <!-- Page End -->
 
-  <noscript>JavaScript is Required :(!</noscript>
+  <noscript>JavaScript is required :(!</noscript>
 
   <script src="./scripts/projects.js"></script>
 </body>

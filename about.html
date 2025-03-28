@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,38 +8,37 @@
 
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
+  <!-- TermCSS -->
   <link rel="stylesheet" type="text/css" href="./styles/termcss.css" />
   <script type="module" src="./scripts/termcss.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./styles/language.css" />
+  <!-- Languages -->
+  <link rel="stylesheet" type="text/css" href="./styles/languages.css" />
 
+  <!-- Theme -->
+  <script src="./scripts/theme.js"></script>
+
+  <!-- EJS -->
   <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.10/ejs.min.js"></script>
 </head>
 <body>
-  <main id="termcss" class="container-v my-3 py-3 g-5">
+  <!-- Page Begin -->
+  <main id="termcss" class="container-v g-5 my-3 py-3 mo-m-1 mo-p-1">
 
-    <!--
-      Header Begin
-    -->
+    <!-- Header Begin -->
     <header class="container-v g-3">
 
-      <!--
-        Title Begin
-      -->
+      <!-- Title Begin -->
       <div class="section-title">
         <a href="./">
           <div class="section-content">
-            + reallukee.github.io +
+            reallukee.github.io
           </div>
         </a>
       </div>
-      <!--
-        Title End
-      -->
+      <!-- Title End -->
 
-      <!--
-        Navnar Begin
-      -->
+      <!-- Navnar Begin -->
       <nav class="container-h g-1">
         <p class="text">
           <a href="./about.html" class="link active">
@@ -59,61 +58,108 @@
           </a>
         </p>
       </nav>
-      <!--
-        Navbar End
-      -->
+      <!-- Navbar End -->
 
     </header>
-    <!--
-      Header End
-    -->
+    <!-- Header End -->
 
-    <!--
-      Main Begin
-    -->
-    <main class="container-v g-3">
+    <!-- Main Begin -->
+    <section class="container-v g-3">
       <header class="section-subtitle">
         <a href="#about" id="about">
           <div class="section-content">
-            + about +
+            about
           </div>
         </a>
       </header>
 
       <div class="container-v g-1" id="aboutContent">
-        <p class="text">
-          Blob, Blob, Blob?
+        <p class="text-highlight">
+          <span>
+            mmm?
+          </span>
         </p>
       </div>
-    </main>
-    <!--
-      Main End
-    -->
+    </section>
+    <!-- Main End -->
 
     <div class="my-0"></div>
 
-    <!--
-      Footer Begin
-    -->
-    <footer class="container-v g-1">
-      <p class="text">
-        made with my hands
-      </p>
-
-      <nav class="container-h g-1">
+    <!-- Footer Begin -->
+    <footer class="container-v g-3">
+      <div class="container-v g-1">
         <p class="text">
-          <a href="https://github.com/reallukee" target="_blank">
-           GitHub
+          made with my hands &lt;3
+        </p>
+
+        <div class="button">
+          Me!!!
+
+          <div class="button-content">
+            <a href="https://github.com/reallukee" target="_blank">
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="button">
+          Repository!!!
+
+          <div class="button-content">
+            <a href="https://github.com/reallukee/reallukee.github.io" target="_blank">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-v g-1">
+        <!-- <p class="text">
+          Current Theme:
+
+          <a href="#theme" id="switchTheme">
+            auto
+          </a>
+        </p> -->
+
+        <nav class="container-h g-1">
+          <p class="text">
+            theme:
+          </p>
+
+          <p class="text">
+            <a href="#theme" class="active" id="autoTheme">
+              auto
+            </a>
+          </p>
+
+          <p class="text">
+            <a href="#theme" id="lightTheme">
+              light
+            </a>
+          </p>
+
+          <p class="text">
+            <a href="#theme" id="darkTheme">
+              dark
+            </a>
+          </p>
+        </nav>
+      </div>
+
+      <div class="container-v g-1">
+        <p class="text">
+          <a href="#">
+            top ^
           </a>
         </p>
-      </nav>
+      </div>
     </footer>
-    <!--
-      Footer End
-    -->
+    <!-- Footer End -->
 
   </main>
+  <!-- Page End -->
 
-  <noscript>JavaScript is Required :(!</noscript>
+  <noscript>JavaScript is required :(!</noscript>
 </body>
 </html>

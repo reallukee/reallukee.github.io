@@ -1,15 +1,28 @@
 :root {
-    --text: #EEE;
-    --body: #111;
-    --textSecondary: #CCC;
-    --bodySecondary: #222;
-}
+    --textDark: #EEE;
+    --bodyDark: #111;
+    --textSecondaryDark: #CCC;
+    --bodySecondaryDark: #222;
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --text: #111;
-        --body: #EEE;
-        --textSecondary: #222;
-        --bodySecondary: #CCC;
-    }
+    --textLight: #111;
+    --bodyLight: #EEE;
+    --textSecondaryLight: #222;
+    --bodySecondaryLight: #CCC;
+
+    --black: #323232;
+    --red: #CD4B4B;
+    --green: #4BCD4B;
+    --yellow: #CDCD4B;
+    --blue: #4B4BCD;
+    --magenta: #CD4BCD;
+    --cyan: #4BCDCD;
+    --white: #E1E1E1;
+    --bright-black: #646464;
+    --bright-red: #FF7D7D;
+    --bright-green: #7DFF7D;
+    --bright-yellow: #FFFF7D;
+    --bright-blue: #7D7DFF;
+    --bright-magenta: #FF7DFF;
+    --bright-cyan: #7DFFFF;
+    --bright-white: #FFFFFF;
 }
