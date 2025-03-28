@@ -304,7 +304,7 @@ a {
 
 .section-title > .section-content,
 .section-title > a > .section-content {
-    display: block;
+    display: inline-block;
 
     color: var(--text);
     background: var(--body);
@@ -318,7 +318,7 @@ a {
 
 .section-subtitle > .section-content,
 .section-subtitle > a > .section-content {
-    display: block;
+    display: inline-block;
 
     color: var(--text);
     background: var(--body);
@@ -332,7 +332,7 @@ a {
 
 .section-text > .section-content,
 .section-text > a > .section-content {
-    display: block;
+    display: inline-block;
 
     color: var(--text);
     background: var(--body);
