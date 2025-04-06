@@ -12,18 +12,23 @@
                     return response.json();
                 }
             })
+            .then((data) => {
+                return data.content.sort((a, b) => {
+                    return b.pinned - a.pinned;
+                });
+            })
             .catch((error) => {
                 throw error;
             });
 
         if (licenseParam) {
-            projects.content = projects.content.filter((project) => {
+            projects = projects.filter((project) => {
                 return project.license === licenseParam;
             });
         }
 
         if (languageParam) {
-            projects.content = projects.content.filter((project) => {
+            projects = projects.filter((project) => {
                 return project.languages.some((language) => {
                     return language.id === languageParam;
                 });
@@ -31,7 +36,7 @@
         }
 
         if (tagParam) {
-            projects.content = projects.content.filter((project) => {
+            projects = projects.filter((project) => {
                 return project.tags.some((tag) => {
                     return tag.id === tagParam;
                 });
@@ -56,7 +61,7 @@
         projectTemplateSource = projectsTemplate.innerHTML;
 
         const data = {
-            projects: projects.content,
+            projects: projects,
         };
 
         const projectTemplateHtml = ejs.render(projectTemplateSource, data);

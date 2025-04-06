@@ -1,25 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const switchTheme = document.querySelector("#switchTheme");
+    function setTheme(theme) {
+        const currentTheme = window.GetTheme();
 
-    if (switchTheme) {
-        switchTheme.addEventListener("click", () => {
-            const currentTheme = window.GetTheme();
+        window.SetTheme(theme);
 
-            switch (currentTheme) {
-                case "auto": setTheme("light"); break;
-                case "light": setTheme("dark"); break;
-                case "dark": setTheme("auto"); break;
-                default: break;
-            }
-
-            switchTheme.textContent = window.GetTheme();
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            switchTheme.textContent = window.GetTheme();
-        });
-
-        switchTheme.textContent = window.GetTheme();
+        document.querySelector(`#${currentTheme}Theme`).classList.remove("active");
+        document.querySelector(`#${theme}Theme`).classList.add("active");
     }
 
     const autoTheme = document.querySelector("#autoTheme");
@@ -28,40 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (autoTheme && lightTheme && darkTheme) {
         autoTheme.addEventListener("click", () => {
-            const currentTheme = window.GetTheme();
-
-            window.SetTheme("auto");
-
-            document.querySelector(`#${currentTheme}Theme`).classList.remove("active");
-
-            document.querySelector(`#autoTheme`).classList.add("active");
+            setTheme("auto");
         });
 
         lightTheme.addEventListener("click", () => {
-            const currentTheme = window.GetTheme();
-
-            window.SetTheme("light");
-
-            document.querySelector(`#${currentTheme}Theme`).classList.remove("active");
-
-            document.querySelector(`#lightTheme`).classList.add("active");
+            setTheme("light");
         });
 
         darkTheme.addEventListener("click", () => {
-            const currentTheme = window.GetTheme();
-
-            window.SetTheme("dark");
-
-            document.querySelector(`#${currentTheme}Theme`).classList.remove("active");
-
-            document.querySelector(`#darkTheme`).classList.add("active");
+            setTheme("dark");
         });
 
         const currentTheme = window.GetTheme();
 
-        if (currentTheme != "auto") {
-            document.querySelector(`#autoTheme`).classList.remove("active");
+        if (currentTheme !== "auto") {
+            const currentTheme = window.GetTheme();
 
+            document.querySelector(`#autoTheme`).classList.remove("active");
             document.querySelector(`#${currentTheme}Theme`).classList.add("active");
         }
     }

@@ -10,12 +10,17 @@
                     return response.json();
                 }
             })
+            .then((data) => {
+                return data.content.sort((a, b) => {
+                    return b.pinned - a.pinned;
+                });
+            })
             .catch((error) => {
                 throw error;
             });
 
         if (projectParam) {
-            project.content = project.content.filter((project) => {
+            project = project.filter((project) => {
                 return project.id === projectParam;
             });
         }
@@ -38,7 +43,7 @@
         projectTemplateSource = projectTemplate.innerHTML;
 
         const data = {
-            project: project.content[0],
+            project: project[0],
         };
 
         const projectTemplateHtml = ejs.render(projectTemplateSource, data);

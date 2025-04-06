@@ -2,6 +2,40 @@
   "$schema": "./projects.scheme.json",
   "content": [
     {
+      "id": "reallukee.github.io",
+      "name": "reallukee.github.io",
+      "repository": "https://github.com/reallukee/reallukee.github.io",
+      "license": "MIT",
+      "languages": [
+        {
+          "id": "html",
+          "name": "HTML"
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "id": "css",
+          "name": "CSS"
+        }
+      ],
+      "tags": [
+        {
+          "id": "me",
+          "name": "Me"
+        },
+        {
+          "id": "web-app",
+          "name": "Web App"
+        }
+      ],
+      "description": [
+        "🌐 My website"
+      ],
+      "buttons": []
+    },
+    {
       "id": "arp",
       "name": "ARP",
       "repository": "https://github.com/reallukee/arp",

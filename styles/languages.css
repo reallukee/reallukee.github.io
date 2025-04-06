@@ -41,23 +41,23 @@
 
 
 
-.language.c * { color: var(--c); }
-.language.cpp * { color: var(--cpp); }
-.language.makefile * { color: var(--makefile); }
-.language.csharp * { color: var(--csharp); }
-.language.vbnet * { color: var(--vbnet); }
-.language.fsharp * { color: var(--fhsarp); }
-.language.html * { color: var(--html); }
-.language.css * { color: var(--css); }
-.language.javascript * { color: var(--javascript); }
-.language.typescript * { color: var(--typescript); }
-.language.php * { color: var(--php); }
-.language.ejs * { color: var(--ejs); }
-.language.python * { color: var(--python); }
-.language.powershell * { color: var(--powershell); }
-.language.batchfile * { color: var(--batchfile); }
-.language.shell * { color: var(--shell); }
-.language.vbscript * { color: var(--vbscript); }
+.language.c { color: var(--c); }
+.language.cpp { color: var(--cpp); }
+.language.makefile { color: var(--makefile); }
+.language.csharp { color: var(--csharp); }
+.language.vbnet { color: var(--vbnet); }
+.language.fsharp { color: var(--fhsarp); }
+.language.html { color: var(--html); }
+.language.css { color: var(--css); }
+.language.javascript { color: var(--javascript); }
+.language.typescript { color: var(--typescript); }
+.language.php { color: var(--php); }
+.language.ejs { color: var(--ejs); }
+.language.python { color: var(--python); }
+.language.powershell { color: var(--powershell); }
+.language.batchfile { color: var(--batchfile); }
+.language.shell { color: var(--shell); }
+.language.vbscript { color: var(--vbscript); }
 
 
 

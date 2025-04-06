@@ -6,6 +6,8 @@
 
   <title>reallukee ~ project</title>
 
+  <meta name="theme-color" content="#111111" />
+
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
   <!-- TermCSS -->
@@ -20,6 +22,8 @@
 
   <!-- EJS -->
   <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.10/ejs.min.js"></script>
+
+  <link rel="manifest" type="webmanifest" href="./site.webmanifest" />
 </head>
 <body>
   <!-- Page Begin -->
@@ -38,7 +42,7 @@
       </div>
       <!-- Title End -->
 
-      <!-- Navnar Begin -->
+      <!-- Navbar Begin -->
       <nav class="container-h g-1">
         <p class="text">
           <a href="./about.html" class="link">
@@ -86,26 +90,22 @@
 
         <div class="container-h g-1">
           <p class="text">
-            <span class="license <%= project.license; %>">
-              <a href="./projects.html?license=<%= project.license; %>" class="no-underline">
-                <span class="fw-light">
-                  <%= project.license; %>
-                </span>
-              </a>
-            </span>
+            <a href="./projects.html?license=<%= project.license; %>" class="no-underline">
+              <span class="fw-light">
+                <%= project.license; %>
+              </span>
+            </a>
           </p>
         </div>
 
         <div class="container-h g-1">
           <% project.languages.forEach((language) => { %>
             <p class="text">
-              <span class="language <%= language.id; %>">
-                <a href="./projects.html?language=<%= language.id; %>" class="no-underline">
-                  <span class="fw-normal">
-                    <%= language.name; %>
-                  </span>
-                </a>
-              </span>
+              <a href="?language=<%= language.id; %>" class="no-underline">
+                <span class="language <%= language.id; %>">
+                  <%= language.name; %>
+                </span>
+              </a>
             </p>
           <% }); %>
         </div>
@@ -113,13 +113,11 @@
         <div class="container-h g-1">
           <% project.tags.forEach((tag) => { %>
             <p class="text-highlight">
-              <span class="tag <%= tag.id; %>">
-                <a href="./projects.html?tag=<%= tag.id; %>">
-                  <span class="fs-italic">
-                    <%= tag.name; %>
-                  </span>
-                </a>
-              </span>
+              <a href="?tag=<%= tag.id; %>">
+                <span class="fs-italic">
+                  <%= tag.name; %>
+                </span>
+              </a>
             </p>
           <% }); %>
         </div>
@@ -134,28 +132,28 @@
 
         <div class="container-v g-1">
           <div class="button">
-            <div class="button-content">
-              <a href="./project.html?project=<%= project.id; %>">
+            <a href="./project.html?project=<%= project.id; %>">
+              <div class="button-content">
                 Project
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
 
           <div class="button">
-            <div class="button-content">
-              <a href="<%= project.repository; %>" target="_blank">
+            <a href="<%= project.repository; %>" target="_blank">
+              <div class="button-content">
                 GitHub
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
 
           <% project.buttons.forEach((button) => { %>
             <div class="button">
-              <div class="button-content">
-                <a href="<%= button.url; %>" target="_blank">
+              <a href="<%= button.url; %>" target="_blank">
+                <div class="button-content">
                   <%= button.name; %>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
           <% }); %>
         </div>
@@ -181,52 +179,44 @@
         <div class="button">
           Me!!!
 
-          <div class="button-content">
-            <a href="https://github.com/reallukee" target="_blank">
+          <a href="https://github.com/reallukee" target="_blank">
+            <div class="button-content">
               GitHub
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
 
         <div class="button">
           Repository!!!
 
-          <div class="button-content">
-            <a href="https://github.com/reallukee/reallukee.github.io" target="_blank">
+          <a href="https://github.com/reallukee/reallukee.github.io" target="_blank">
+            <div class="button-content">
               GitHub
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="container-v g-1">
-        <!-- <p class="text">
-          Current Theme:
-
-          <a href="#theme" id="switchTheme">
-            auto
-          </a>
-        </p> -->
-
         <nav class="container-h g-1">
           <p class="text">
             theme:
           </p>
 
           <p class="text">
-            <a href="#theme" class="active" id="autoTheme">
+            <a href="#theme" class="link active" id="autoTheme">
               auto
             </a>
           </p>
 
           <p class="text">
-            <a href="#theme" id="lightTheme">
+            <a href="#theme" class="link" id="lightTheme">
               light
             </a>
           </p>
 
           <p class="text">
-            <a href="#theme" id="darkTheme">
+            <a href="#theme" class="link" id="darkTheme">
               dark
             </a>
           </p>
@@ -235,7 +225,7 @@
 
       <div class="container-v g-1">
         <p class="text">
-          <a href="#">
+          <a href="#" class="link">
             top ^
           </a>
         </p>

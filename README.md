@@ -6,6 +6,18 @@
 
 
 
+# Local
+
+```
+npm i -g vite
+```
+
+```
+vite
+```
+
+
+
 # Author
 
 * [Luca Pollicino](https://github.com/reallukee)
